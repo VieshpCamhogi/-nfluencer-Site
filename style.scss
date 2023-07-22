@@ -1,0 +1,581 @@
+$primary-color: #774cec;
+$secondary-color: #ffaf63;
+$header-fonts: 'Cormorant', serif;
+$text-fonts: 'Quicksand', sans-serif;
+
+
+.header-title {
+    font-size: 3rem;
+    font-family: $header-fonts;
+    color: $primary-color;
+    position: relative;
+    margin: 20px 0;
+    border-bottom: 1px solid #774cec;
+    display: inline-block;
+
+    @media (max-width:596px) {
+        font-size: 2rem
+    }
+}
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&family=Open+Sans:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+html {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+
+    body {
+        position: relative;
+        font-size: 10px;
+        overflow-x: hidden !important;
+        max-width: 100vw;
+
+        .shadow {
+            box-shadow: 4px 4px 8px 0 rgba(141, 141, 141, 0.2) !important;
+        }
+
+        #header {
+            width: 100vw;
+            background-color: transparent;
+            position: fixed;
+            z-index: 1;
+
+            .navbar {
+                justify-content: end;
+                font-size: 1.2rem;
+                font-family: $header-fonts;
+                animation-name: example;
+                padding: 0;
+
+                .navbar-toggler-icon {
+                    display: inline-block;
+                    width: 1.5em;
+                    height: 1.5em;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                    content: "";
+                    background: no-repeat center center;
+                    background-size: 100% 100%;
+                    background-color: white;
+                    border-radius: 10px;
+                }
+
+                .navbar-nav {
+                    .nav-item {
+                        background-color: white;
+
+                        .shadow {
+                            box-shadow: 2px 2px 2px gray;
+                        }
+
+                        a {
+                            font-weight: 600;
+                            color: $primary-color;
+                            transition: all 0.7s;
+                            letter-spacing: 1px;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+
+
+                .show {
+                    position: absolute;
+                    top: 50px;
+                    background-color: rgba(0, 0, 0, 0.637);
+                    border-radius: 5px;
+
+                    .navbar-nav {
+                        .nav-item {
+                            a {
+                                color: $secondary-color;
+                                padding: 10px 30px;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #home {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+
+            .container {
+                margin: 0 auto;
+            }
+
+            .box-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                span {
+                    color: $primary-color;
+                    font-size: 7rem;
+                    line-height: 1;
+
+
+                    @media (max-width: 992px) {
+                        font-size: 4rem;
+                    }
+                }
+
+                h1 {
+                    -webkit-text-stroke: 2px $primary-color;
+                    color: transparent;
+                    font-size: 7rem;
+                    margin-bottom: 20px;
+
+                    @media (max-width: 992px) {
+                        font-size: 4rem;
+                    }
+                }
+
+                h3 {
+                    color: $primary-color;
+                    font-family: $header-fonts;
+                    font-size: 1.8rem;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    text-transform: capitalize;
+                    font-weight: bolder;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        color: $secondary-color;
+                    }
+                }
+
+            }
+
+            .background-home {
+
+                -webkit-clip-path: polygon(0% 100%, 0% 0%, 80% 0%, 100% 80%);
+                height: 100%;
+                width: 50%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                background-image: url(/img/main.jpeg);
+                background-size: cover;
+                background-position: top center;
+                @media (max-width:715px) {
+                    opacity: 0.6;
+            }
+            }
+        }
+
+        #hakkimda {
+
+            .container {
+                min-height: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
+                cursor: default;
+
+                .h-margin {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                .hakkimda-img {
+                    background-image: url(/img/hakkimda.jpeg);
+                    background-position: top center;
+                    background-size: cover;
+                    min-height: 700px;
+                    border-radius: 20px;
+                }
+
+                .h-content {
+                    position: relative;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    min-width: 0;
+                    word-wrap: break-word;
+
+                    .h-card-header {
+                        font-size: 1.5rem;
+                        font-family: $header-fonts;
+                        font-weight: 600;
+                        padding: 0.75rem 1.25rem;
+                        margin-bottom: 0;
+                    }
+
+                    .card-body {
+                        .h-card-title {
+                            font-size: 1.7rem;
+                            font-family: $header-fonts;
+                            font-weight: 600;
+                        }
+
+                        .h-card-text {
+                            font-family: $text-fonts;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #hizmetlerim {
+
+            .slick-slider {
+                padding: 20px;
+            }
+
+            .hizmetlerim-slick {
+
+                ul.slick-dots {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    margin: 5px;
+
+                    li {
+                        margin: 0 5px;
+
+                        button {
+                            border-radius: 10px;
+                            border: 2px solid $primary-color;
+                            color: transparent;
+                        }
+                    }
+                }
+
+                .hizmetlerim-card {
+                    text-align: center;
+
+                    img {
+                        margin: 0 auto;
+                        padding-top: 5px;
+                        height: 400px !important;
+                        border-radius: 200px;
+
+                        @media (max-width: 480px) {
+                            height: 250px !important;
+                        }
+                    }
+
+                    .card-content {
+                        padding: 10px 70px;
+
+                        @media (max-width: 480px) {
+                            padding: 10px 20px;
+                        }
+
+                        h1 {
+                            font-size: 2rem;
+                            font-family: $header-fonts;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                            color: $primary-color;
+                        }
+
+                        h3 {
+                            font-size: 1.5rem;
+                            font-family: $header-fonts;
+                            letter-spacing: 1px;
+                            color: $primary-color;
+                        }
+
+                        p {
+                            font-family: $text-fonts;
+                            letter-spacing: 1.5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #etkinlikler {
+            .container {
+                margin: 0 auto;
+            }
+
+            .et-flex {
+
+                .et-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 20px;
+                    transition: all 0.7s;
+
+
+                    &:hover {
+                        transform: translateY(-10px);
+                        transform: scale(1.05);
+
+                        .et-text {
+                            background-color: #2f2f2f;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+
+                        h1 {
+                            color: $secondary-color !important;
+                        }
+
+                        h3 {
+                            color: white;
+                        }
+                    }
+
+
+                    .et-image1 {
+                        background-image: url(/img/bulusma.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-image2 {
+                        background-image: url(/img/egitim.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-image3 {
+                        background-image: url(/img/chp.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-image4 {
+                        background-image: url(/img/gelisim.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-image5 {
+                        background-image: url(/img/canliyayin.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-image6 {
+                        background-image: url(/img/toplanti.jpeg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        max-height: 350px;
+                        height: 300px;
+                    }
+
+                    .et-text {
+                        padding: 20px;
+                        cursor: default;
+                        height: 290px;
+                        text-overflow: ellipsis;
+
+                        h1 {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            font-family: $header-fonts;
+                            color: $primary-color;
+                        }
+
+                        h3 {
+                            font-size: 1rem;
+                            font-family: $text-fonts;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #iletisim {
+
+            padding: 40px 0;
+            background-color: #2f2f2f;
+
+            .iletisim-header {
+                color: $primary-color;
+                text-align: center;
+                font-size: 3rem;
+                margin-bottom: 20px;
+
+                @media (max-width: 768px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .row {
+
+                text-align: center;
+
+                @media (max-width: 768px) {
+                    text-align: unset;
+                }
+
+                a {
+                    display: inline-block;
+                    margin: 10px;
+
+
+
+                    i {
+                        position: relative;
+                        font-size: 2rem;
+                        color: rgb(202, 202, 202);
+                        transition: all 0.7s;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.5rem;
+                        }
+
+                        .tooltiptext {
+                            visibility: hidden;
+                            background-color: black;
+                            color: #fff;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            border-radius: 6px;
+                            padding: 5px 10px;
+                            font-size: 1rem;
+                            font-family: $header-fonts;
+                        }
+
+
+                        &:hover {
+                            transform: scale(1.2);
+
+                            .et-text {
+                                background-color: #2f2f2f;
+                                border-bottom-left-radius: 20px;
+                                border-bottom-right-radius: 20px;
+                            }
+
+                            .tooltiptext {
+                                visibility: visible;
+                            }
+                        }
+
+                    }
+
+
+                }
+            }
+
+            .i-container {
+                margin-top: 20px;
+                width: 30vw;
+                margin: 0 auto;
+
+                @media (max-width:879px) {
+                    width: 80%;
+                }
+
+                .iletisim-form {
+                    width: 100%;
+                    text-align: center;
+                    font-family: $header-fonts;
+                    margin-top: 20px;
+
+                    h1 {
+                        color: rgb(202, 202, 202);
+                    }
+
+                    form {
+
+                        .i-flex {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 20px;
+                        }
+
+                        @media (max-width:879px) {
+                            flex-direction: column;
+                        }
+
+                        label {
+                            color: rgb(202, 202, 202);
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        input {
+                            width: 50%;
+                            font-size: 1.2rem;
+
+                            @media (max-width:879px) {
+                                width: 100%;
+                            }
+                        }
+
+                        .button {
+                            width: auto;
+                            padding: 10px 20px;
+                            background-color: #774cec;
+                            color: #ffaf63;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        .home-button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+
+            a {
+                i {
+                    font-size: 3rem;
+                    color: $primary-color;
+                    transition: all 0.7s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+
+    }
+}
