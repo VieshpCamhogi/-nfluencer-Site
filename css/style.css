@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;700&family=Open+Sans:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+.header-title {
+  font-size: 3rem;
+  font-family: "Cormorant", serif;
+  color: #774cec;
+  position: relative;
+  margin: 20px 0;
+  border-bottom: 1px solid #774cec;
+  display: inline-block;
+}
+@media (max-width: 596px) {
+  .header-title {
+    font-size: 2rem;
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+html body {
+  position: relative;
+  font-size: 10px;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+html body .shadow {
+  box-shadow: 4px 4px 8px 0 rgba(141, 141, 141, 0.2) !important;
+}
+html body #header {
+  width: 100vw;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+}
+html body #header .navbar {
+  justify-content: end;
+  font-size: 1.2rem;
+  font-family: "Cormorant", serif;
+  animation-name: example;
+  padding: 0;
+}
+html body #header .navbar .navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+html body #header .navbar .navbar-nav .nav-item {
+  background-color: white;
+}
+html body #header .navbar .navbar-nav .nav-item .shadow {
+  box-shadow: 2px 2px 2px gray;
+}
+html body #header .navbar .navbar-nav .nav-item a {
+  font-weight: 600;
+  color: #774cec;
+  transition: all 0.7s;
+  letter-spacing: 1px;
+}
+html body #header .navbar .navbar-nav .nav-item a:hover {
+  transform: scale(1.1);
+}
+html body #header .navbar .show {
+  position: absolute;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 5px;
+}
+html body #header .navbar .show .navbar-nav .nav-item a {
+  color: #ffaf63;
+  padding: 10px 30px;
+}
+html body #header .navbar .show .navbar-nav .nav-item a:hover {
+  transform: scale(1.1);
+}
+html body #home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+html body #home .container {
+  margin: 0 auto;
+}
+html body #home .box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+html body #home .box-content span {
+  color: #774cec;
+  font-size: 7rem;
+  line-height: 1;
+}
+@media (max-width: 992px) {
+  html body #home .box-content span {
+    font-size: 4rem;
+  }
+}
+html body #home .box-content h1 {
+  -webkit-text-stroke: 2px #774cec;
+  color: transparent;
+  font-size: 7rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  html body #home .box-content h1 {
+    font-size: 4rem;
+  }
+}
+html body #home .box-content h3 {
+  color: #774cec;
+  font-family: "Cormorant", serif;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+html body #home .box-content h3 p {
+  padding: 0;
+  margin: 0;
+  color: #ffaf63;
+}
+html body #home .background-home {
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 80% 0%, 100% 80%);
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url(/img/main.jpeg);
+  background-size: cover;
+  background-position: top center;
+}
+@media (max-width: 715px) {
+  html body #home .background-home {
+    opacity: 0.6;
+  }
+}
+html body #hakkimda .container {
+  min-height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  cursor: default;
+}
+html body #hakkimda .container .h-margin {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+html body #hakkimda .container .hakkimda-img {
+  background-image: url(/img/hakkimda.jpeg);
+  background-position: top center;
+  background-size: cover;
+  min-height: 700px;
+  border-radius: 20px;
+}
+html body #hakkimda .container .h-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+html body #hakkimda .container .h-content .h-card-header {
+  font-size: 1.5rem;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+}
+html body #hakkimda .container .h-content .card-body .h-card-title {
+  font-size: 1.7rem;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+}
+html body #hakkimda .container .h-content .card-body .h-card-text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+html body #hizmetlerim .slick-slider {
+  padding: 20px;
+}
+html body #hizmetlerim .hizmetlerim-slick ul.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+html body #hizmetlerim .hizmetlerim-slick ul.slick-dots li {
+  margin: 0 5px;
+}
+html body #hizmetlerim .hizmetlerim-slick ul.slick-dots li button {
+  border-radius: 10px;
+  border: 2px solid #774cec;
+  color: transparent;
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card {
+  text-align: center;
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card img {
+  margin: 0 auto;
+  padding-top: 5px;
+  height: 400px !important;
+  border-radius: 200px;
+}
+@media (max-width: 480px) {
+  html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card img {
+    height: 250px !important;
+  }
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card .card-content {
+  padding: 10px 70px;
+}
+@media (max-width: 480px) {
+  html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card .card-content {
+    padding: 10px 20px;
+  }
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card .card-content h1 {
+  font-size: 2rem;
+  font-family: "Cormorant", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #774cec;
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card .card-content h3 {
+  font-size: 1.5rem;
+  font-family: "Cormorant", serif;
+  letter-spacing: 1px;
+  color: #774cec;
+}
+html body #hizmetlerim .hizmetlerim-slick .hizmetlerim-card .card-content p {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1.5px;
+}
+html body #etkinlikler .container {
+  margin: 0 auto;
+}
+html body #etkinlikler .et-flex .et-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.7s;
+}
+html body #etkinlikler .et-flex .et-box:hover {
+  transform: translateY(-10px);
+  transform: scale(1.05);
+}
+html body #etkinlikler .et-flex .et-box:hover .et-text {
+  background-color: #2f2f2f;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+html body #etkinlikler .et-flex .et-box:hover h1 {
+  color: #ffaf63 !important;
+}
+html body #etkinlikler .et-flex .et-box:hover h3 {
+  color: white;
+}
+html body #etkinlikler .et-flex .et-box .et-image1 {
+  background-image: url(/img/bulusma.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-image2 {
+  background-image: url(/img/egitim.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-image3 {
+  background-image: url(/img/chp.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-image4 {
+  background-image: url(/img/gelisim.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-image5 {
+  background-image: url(/img/canliyayin.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-image6 {
+  background-image: url(/img/toplanti.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: 300px;
+}
+html body #etkinlikler .et-flex .et-box .et-text {
+  padding: 20px;
+  cursor: default;
+  height: 290px;
+  text-overflow: ellipsis;
+}
+html body #etkinlikler .et-flex .et-box .et-text h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Cormorant", serif;
+  color: #774cec;
+}
+html body #etkinlikler .et-flex .et-box .et-text h3 {
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+}
+html body #iletisim {
+  padding: 40px 0;
+  background-color: #2f2f2f;
+}
+html body #iletisim .iletisim-header {
+  color: #774cec;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  html body #iletisim .iletisim-header {
+    font-size: 2rem;
+  }
+}
+html body #iletisim .row {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  html body #iletisim .row {
+    text-align: unset;
+  }
+}
+html body #iletisim .row a {
+  display: inline-block;
+  margin: 10px;
+}
+html body #iletisim .row a i {
+  position: relative;
+  font-size: 2rem;
+  color: rgb(202, 202, 202);
+  transition: all 0.7s;
+}
+@media (max-width: 768px) {
+  html body #iletisim .row a i {
+    font-size: 1.5rem;
+  }
+}
+html body #iletisim .row a i .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: "Cormorant", serif;
+}
+html body #iletisim .row a i:hover {
+  transform: scale(1.2);
+}
+html body #iletisim .row a i:hover .et-text {
+  background-color: #2f2f2f;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+html body #iletisim .row a i:hover .tooltiptext {
+  visibility: visible;
+}
+html body #iletisim .i-container {
+  margin-top: 20px;
+  width: 30vw;
+  margin: 0 auto;
+}
+@media (max-width: 879px) {
+  html body #iletisim .i-container {
+    width: 80%;
+  }
+}
+html body #iletisim .i-container .iletisim-form {
+  width: 100%;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  margin-top: 20px;
+}
+html body #iletisim .i-container .iletisim-form h1 {
+  color: rgb(202, 202, 202);
+}
+html body #iletisim .i-container .iletisim-form form .i-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+@media (max-width: 879px) {
+  html body #iletisim .i-container .iletisim-form form {
+    flex-direction: column;
+  }
+}
+html body #iletisim .i-container .iletisim-form form label {
+  color: rgb(202, 202, 202);
+  font-size: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html body #iletisim .i-container .iletisim-form form input {
+  width: 50%;
+  font-size: 1.2rem;
+}
+@media (max-width: 879px) {
+  html body #iletisim .i-container .iletisim-form form input {
+    width: 100%;
+  }
+}
+html body #iletisim .i-container .iletisim-form form .button {
+  width: auto;
+  padding: 10px 20px;
+  background-color: #774cec;
+  color: #ffaf63;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+html body .home-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
+html body .home-button a i {
+  font-size: 3rem;
+  color: #774cec;
+  transition: all 0.7s;
+}
+html body .home-button a i:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=style.css.map */
